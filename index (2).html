@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Should I Upgrade? Apple 2026 AI Advisor — iPhone 17e, MacBook Air M5, iPad Air M4</title>
+<meta name="description" content="Free AI-powered tool: should you upgrade to the iPhone 17e, MacBook Air M5, or iPad Air M4? Get a personalized recommendation in seconds. No signup required.">
+<meta property="og:title" content="Should You Upgrade to Apple's New 2026 Hardware?">
+<meta property="og:description" content="Personalized AI recommendation. Tell us what you have — get a straight answer.">
+<meta property="og:type" content="website">
+<meta name="keywords" content="iPhone 17e upgrade, MacBook Air M5 worth it, iPad Air M4 review, should I upgrade Apple 2026">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0e0e0f; --bg2: #18181a; --bg3: #222224;
+    --text: #f0efe8; --muted: #8a8981;
+    --border: rgba(255,255,255,0.1); --border2: rgba(255,255,255,0.18);
+    --blue: #378ADD; --blue-bg: rgba(55,138,221,0.12); --blue-text: #85B7EB;
+    --green-bg: rgba(99,153,34,0.12); --green-text: #97C459;
+    --amber-bg: rgba(186,117,23,0.12); --amber-text: #EF9F27;
+    --red-bg: rgba(226,75,74,0.12); --red-text: #F09595;
+    --radius: 12px; --radius-sm: 8px;
+  }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+  header { border-bottom: 0.5px solid var(--border); padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+  .brand { font-size: 13px; color: var(--muted); letter-spacing: 0.04em; }
+  .badge { font-size: 11px; background: var(--blue-bg); color: var(--blue-text); border-radius: 20px; padding: 3px 10px; }
+  main { flex: 1; display: flex; align-items: flex-start; justify-content: center; padding: 3rem 1.5rem 4rem; }
+  .card { width: 100%; max-width: 580px; }
+  h1 { font-size: clamp(22px,5vw,36px); font-weight: 600; line-height: 1.2; margin-bottom: 0.5rem; }
+  .subtitle { font-size: 15px; color: var(--muted); line-height: 1.6; margin-bottom: 2rem; }
+  .label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 1.5rem 0 0.6rem; }
+  .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .product-card { border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1rem; cursor: pointer; background: var(--bg2); transition: border-color 0.15s, background 0.15s; user-select: none; }
+  .product-card:hover { border-color: var(--border2); background: var(--bg3); }
+  .product-card.selected { border: 2px solid var(--blue); background: var(--blue-bg); }
+  .product-icon { font-size: 24px; margin-bottom: 8px; }
+  .product-name { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 3px; }
+  .product-tag { font-size: 11px; color: var(--muted); line-height: 1.4; }
+  .text-input { width: 100%; padding: 10px 14px; background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius-sm); color: var(--text); font-size: 14px; outline: none; transition: border-color 0.15s; font-family: inherit; }
+  .text-input::placeholder { color: var(--muted); }
+  .text-input:focus { border-color: var(--blue); }
+  .usage-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .pill { border: 0.5px solid var(--border); border-radius: 20px; padding: 7px 14px; font-size: 13px; cursor: pointer; color: var(--muted); background: var(--bg2); transition: all 0.15s; text-align: center; user-select: none; font-family: inherit; }
+  .pill:hover { border-color: var(--border2); color: var(--text); }
+  .pill.on { border-color: var(--blue); color: var(--blue-text); background: var(--blue-bg); }
+  .btn { width: 100%; margin-top: 1.5rem; padding: 13px; border-radius: var(--radius-sm); border: none; background: var(--blue); color: #fff; font-size: 15px; font-weight: 500; cursor: pointer; transition: opacity 0.15s; font-family: inherit; }
+  .btn:hover { opacity: 0.88; }
+  .btn:disabled { opacity: 0.35; cursor: default; }
+  .btn-ghost { background: none; border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 8px 16px; color: var(--muted); font-size: 13px; cursor: pointer; margin-top: 1rem; transition: color 0.15s; font-family: inherit; }
+  .btn-ghost:hover { color: var(--text); }
+  .dots { display: flex; gap: 6px; margin-bottom: 2rem; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--border2); transition: background 0.2s; }
+  .dot.on { background: var(--blue); }
+  .verdict { display: inline-block; padding: 5px 14px; border-radius: 20px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; margin-bottom: 1rem; text-transform: uppercase; }
+  .v-upgrade { background: var(--green-bg); color: var(--green-text); }
+  .v-wait { background: var(--amber-bg); color: var(--amber-text); }
+  .v-skip { background: var(--red-bg); color: var(--red-text); }
+  .block { background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1rem 1.1rem; margin-bottom: 10px; }
+  .block-title { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+  .block-body { font-size: 14px; color: var(--text); line-height: 1.65; }
+  .block-body ul { padding-left: 1.1rem; }
+  .block-body li { margin: 4px 0; }
+  .context { font-size: 13px; color: var(--muted); margin-bottom: 1rem; }
+  .spinner span { display: inline-block; animation: blink 1.2s infinite; }
+  .spinner span:nth-child(2) { animation-delay: 0.2s; }
+  .spinner span:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes blink { 0%,80%,100%{opacity:.2} 40%{opacity:1} }
+  footer { border-top: 0.5px solid var(--border); padding: 1rem 1.5rem; text-align: center; font-size: 12px; color: var(--muted); }
+  @media (max-width: 500px) {
+    .product-grid, .usage-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <span class="brand">Apple Upgrade Advisor</span>
+  <span class="badge">March 2026 hardware</span>
+</header>
+<main><div class="card" id="app"></div></main>
+<footer>Powered by AI · Free · No signup needed</footer>
+
+<script>
+const PRODUCTS = [
+  { id: 'iphone17e', name: 'iPhone 17e', tag: 'The accessible powerhouse', icon: '📱' },
+  { id: 'macair_m5', name: 'MacBook Air M5', tag: 'Silent, all-day battery', icon: '💻' },
+  { id: 'ipad_air_m4', name: 'iPad Air M4', tag: 'Pro power, lower price', icon: '⬜' },
+];
+const USAGE = ['Social / browsing','Photography / video','Work / productivity','Gaming','Creative (design, art)','School / studying','Programming / dev'];
+
+let S = { step: 0, product: null, device: '', usage: [], loading: false, result: null };
+
+function set(patch) { Object.assign(S, patch); render(); }
+
+function dotsHtml(active) {
+  return '<div class="dots">' + [0,1,2].map(i => `<div class="dot ${i===active?'on':''}"></div>`).join('') + '</div>';
+}
+
+function parse(text) {
+  return {
+    verdict: text.match(/VERDICT:\s*(.+)/i)?.[1]?.trim(),
+    why: text.match(/WHY:\s*([\s\S]+?)(?=YOU'LL GAIN|WATCH OUT|$)/i)?.[1]?.trim(),
+    gains: text.match(/YOU'LL GAIN[:\s]+([\s\S]+?)(?=WATCH OUT|$)/i)?.[1]?.trim(),
+    caveats: text.match(/WATCH OUT[:\s]+([\s\S]+?)$/i)?.[1]?.trim(),
+  };
+}
+
+function blist(text) {
+  if (!text) return '';
+  const lines = text.split('\n').map(l => l.replace(/^[-•*]\s*/,'').trim()).filter(Boolean);
+  return lines.length > 1 ? '<ul>' + lines.map(l => `<li>${l}</li>`).join('') + '</ul>' : `<p style="margin:0">${text}</p>`;
+}
+
+function vclass(v) {
+  if (!v) return 'v-wait';
+  const u = v.toUpperCase();
+  return u.includes('SKIP') ? 'v-skip' : u.includes('WAIT') ? 'v-wait' : 'v-upgrade';
+}
+
+function render() {
+  const { step, product, device, usage, loading, result } = S;
+  const app = document.getElementById('app');
+  let h = '';
+
+  if (step === 0) {
+    h = `<h1>Should you upgrade to Apple's new hardware?</h1>
+    <p class="subtitle">iPhone 17e. MacBook Air M5. iPad Air M4. Just launched. Answer three quick questions — get a straight AI recommendation, no fluff.</p>
+    <button class="btn" style="width:auto;padding:12px 32px;" onclick="set({step:1})">Get my recommendation →</button>`;
+
+  } else if (step === 1) {
+    h = dotsHtml(0) + `
+    <div class="label">Which product are you considering?</div>
+    <div class="product-grid">
+      ${PRODUCTS.map(p => `<div class="product-card ${product?.id===p.id?'selected':''}" onclick="set({product:${JSON.stringify(p)}})">
+        <div class="product-icon">${p.icon}</div><div class="product-name">${p.name}</div><div class="product-tag">${p.tag}</div>
+      </div>`).join('')}
+    </div>
+    <div class="label">What are you upgrading from?</div>
+    <input class="text-input" type="text" placeholder="e.g. iPhone 13, MacBook Air 2020, nothing yet..." value="${device}" oninput="S.device=this.value" />
+    <button class="btn" ${!product?'disabled':''} onclick="set({step:2})">Next →</button>`;
+
+  } else if (step === 2) {
+    h = dotsHtml(1) + `
+    <div class="label">How do you mainly use your device?</div>
+    <p style="font-size:13px;color:var(--muted);margin:-0.2rem 0 0.8rem;">Pick all that apply</p>
+    <div class="usage-grid">
+      ${USAGE.map(u => `<div class="pill ${usage.includes(u)?'on':''}" onclick="toggleUsage('${u}')">${u}</div>`).join('')}
+    </div>
+    <button class="btn" onclick="go()">Get my recommendation →</button>
+    <button class="btn-ghost" onclick="set({step:1})">← Back</button>`;
+
+  } else if (step === 3) {
+    if (loading) {
+      h = `<p style="font-size:20px;font-weight:500;margin-bottom:0.5rem;">Analyzing your situation</p>
+      <p style="font-size:15px;color:var(--muted);margin-top:0.5rem;">Thinking about ${product?.name}${device?' from your '+device:''}<span class="spinner"><span>.</span><span>.</span><span>.</span></span></p>`;
+    } else {
+      const p = parse(result || '');
+      h = dotsHtml(2) + `
+      <p class="context">${product?.name}${device?' · upgrading from '+device:''}</p>
+      <div class="verdict ${vclass(p.verdict)}">${p.verdict || 'See below'}</div>
+      ${p.why ? `<div class="block"><div class="block-title">Bottom line</div><div class="block-body">${blist(p.why)}</div></div>` : ''}
+      ${p.gains ? `<div class="block"><div class="block-title">What you gain</div><div class="block-body">${blist(p.gains)}</div></div>` : ''}
+      ${p.caveats ? `<div class="block"><div class="block-title">Watch out for</div><div class="block-body">${blist(p.caveats)}</div></div>` : ''}
+      <button class="btn-ghost" onclick="set({step:0,product:null,device:'',usage:[],result:null})">← Start over</button>`;
+    }
+  }
+
+  app.innerHTML = h;
+}
+
+function toggleUsage(u) {
+  S.usage = S.usage.includes(u) ? S.usage.filter(x=>x!==u) : [...S.usage, u];
+  render();
+}
+
+async function go() {
+  set({ step: 3, loading: true });
+  try {
+    const res = await fetch('/api/recommend', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ product: S.product?.name, device: S.device, usage: S.usage.join(', ') })
+    });
+    const data = await res.json();
+    S.result = data.result || data.error || 'No response received.';
+  } catch(e) {
+    S.result = 'VERDICT: ERROR\n\nWHY: Could not reach the server. Please try again.\n\nYOU\'LL GAIN:\n- Nothing right now\n\nWATCH OUT:\n- Try refreshing the page';
+  }
+  set({ loading: false });
+}
+
+render();
+</script>
+</body>
+</html>
